@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.title img{
+    width: 200px;
+}
+
+.main{
+    display: flex;
+    margin: 20px;
+}
+
+.title{
+    padding-right: 1em;
+}
