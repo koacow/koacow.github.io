@@ -1,16 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+} 
+
+:root{
+    --main-background-color: lightcyan;
+    --nav-background-color: black;
+    --nav-link-color: white;
+    --nav-link-hover-color: grey;
+    --main-primary-color: #b8f5ff;
+    --main-secondary-color: #64c2ec;
+    --main-box-shadow-color: lightgrey;
+}
+
 nav{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--nav-background-color);
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--nav-link-color);
+}
+
+nav a:hover{
+    color: var(--nav-link-hover-color);
+}
+.title{
+    margin: 20px;
+    text-align: center;
 }
 .title img{
-    width: 200px;
+    width: min(20vw,150px);
 }
 
 .main{
-    display: flex;
-    margin: 20px;
+    display: grid;
+    grid-template: repeat(4,auto) / min(30vw,200px) auto;
+    grid-column-gap: 20px;
+    background-color: var(--main-background-color);
+    padding-right: 20px;
+}
+
+.content{
+    padding-top: 15px;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li{
+    padding-left: 20px;
 }
 
 .title{
-    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    grid-row: 1/5;
+}
+
+.content-card{
+    margin: 20px 0;
+    padding: 25px;
+    box-shadow: var(--main-box-shadow-color) 5px 5px;
+    border-radius: 15px;
+}
+
+.content-card.primary-color{
+    background-color: var(--main-primary-color);
+}
+
+.content-card.secondary-color{
+    background-color: var(--main-secondary-color);
+}
+.icons{
+    display: flex;
+    gap: 1rem;
+}
+.icons img{
+    width: min(10vw,75px);
 }
