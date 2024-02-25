@@ -21,6 +21,7 @@ nav{
     align-items: center;
     padding: 20px;
     background-color: var(--nav-background-color);
+    position: sticky;
 }
 nav a{
     text-decoration: none;
@@ -84,19 +85,31 @@ ul li{
     display: flex;
     gap: 1rem;
 }
-.content-card .icon{
+.content-section .icon{
     height: 50px;
 }
 .icons .icon{
     width: min(10vw,75px);
 }
+.content-section{
+    margin-top: 10px;
+}
 .img-container{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 10px;
+    height: min(200px,400px);
+}
+
+.content-section a{
+    color: black;
+}
+
+.content-section a:hover{
+    color: grey;
 }
 
 .img-container .img-content{
-    width: min(200px,400px);
     border-radius: 25px;
 
 }
