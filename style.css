@@ -22,6 +22,8 @@ nav{
     padding: 20px;
     background-color: var(--nav-background-color);
     position: sticky;
+    top: 0;
+    z-index: 10;
 }
 nav a{
     text-decoration: none;
@@ -72,6 +74,7 @@ ul li{
     padding: 25px;
     box-shadow: var(--main-box-shadow-color) 5px 5px;
     border-radius: 15px;
+    width: auto;
 }
 
 .content-card.primary-color{
@@ -92,7 +95,7 @@ ul li{
     width: min(10vw,75px);
 }
 .content-section{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .img-container{
     display: flex;
