@@ -5,13 +5,17 @@
     font-family: 'Poppins';
 } 
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
-    --main-background-color: lightcyan;
-    --nav-background-color: black;
-    --nav-link-color: white;
-    --nav-link-hover-color: grey;
-    --main-primary-color: #b8f5ff;
-    --main-secondary-color: #64c2ec;
+    --main-background-color: #C0B7B1;
+    --nav-background-color: #131515;
+    --nav-link-color: #8E6E53;
+    --nav-link-hover-color: #C69C72;
+    --main-primary-color: #8E6E53;
+    --main-secondary-color: #C69C72;
     --main-box-shadow-color: lightgrey;
 }
 
@@ -20,10 +24,11 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
-    background-color: var(--nav-background-color);
+    background: var(--nav-background-color);
     position: sticky;
     top: 0;
     z-index: 10;
+    width: 100vw;
 }
 nav a{
     text-decoration: none;
@@ -41,18 +46,37 @@ nav a:hover{
     width: min(20vw,150px);
 }
 
+.title .icon:hover{
+    transform: scale(1.1);
+}
+
+
 .main{
-    display: grid;
-    grid-template: repeat(4,auto) / min(30vw,200px) auto;
-    grid-column-gap: 20px;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
     background-color: var(--main-background-color);
     padding-right: 20px;
 }
+.introduction h1{
+    display: inline;
+}
 
+.introduction{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+#name{
+    color: var(--main-background-color);
+}
 .content{
     padding-top: 15px;
 }
 
+.content h1{
+    text-align: center;
+}
 ul{
     list-style: none;
 }
@@ -63,18 +87,16 @@ ul li{
 
 .title{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    grid-row: 1/5;
+    justify-content: center;
+    gap: 20px;
 }
 
 .content-card{
-    margin: 20px 0;
     padding: 25px;
     box-shadow: var(--main-box-shadow-color) 5px 5px;
-    border-radius: 15px;
-    width: auto;
+    width: 100%;
+    height: max(min-content,90vh);
 }
 
 .content-card.primary-color{
@@ -90,18 +112,41 @@ ul li{
 }
 .content-section .icon{
     height: 50px;
+    width: fit-content;
 }
 .icons .icon{
     width: min(10vw,75px);
 }
-.content-section{
-    margin-top: 20px;
+.content-section hr{
+    color: black;
+    width: 80%;
 }
-.img-container{
+.content-section{
+    margin: 20px 0;
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 10px;
-    height: min(200px,400px);
+}
+
+.projects .content-section, .skills .content-section{
+    margin: 20px 0;
+    display: block;
+}
+
+#skills-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-section-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content-section-img{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
 }
 
 .content-section a{
@@ -112,7 +157,6 @@ ul li{
     color: grey;
 }
 
-.img-container .img-content{
-    border-radius: 25px;
-
+.content-section-img .img-content{
+    width: 50%;
 }
