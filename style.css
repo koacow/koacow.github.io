@@ -31,9 +31,13 @@ nav{
     z-index: 10;
     width: 100vw;
 }
+nav .nav-links{
+    margin: 0 auto;
+}
 nav a{
     text-decoration: none;
     color: var(--nav-link-color);
+    margin: 0 20px;
 }
 
 nav a:hover{
@@ -108,15 +112,16 @@ ul li{
 }
 .content-section .icon{
     height: 50px;
-    width: fit-content;
+    width: min-content;
 }
 .icons .icon{
-    width: min(10vw,75px);
+    width: min(10vw,50px);
 }
 
 .content-section{
     margin: 20px 0;
     display: flex;
+    padding: 0 30px;
 }
 
 .projects .content-section, .skills .content-section{
