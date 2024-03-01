@@ -146,6 +146,7 @@ ul li{
     flex-direction: column;
     width: 50%;
     align-items: center;
+    justify-content: center;
 }
 
 .content-section a{
@@ -157,5 +158,9 @@ ul li{
 }
 
 .content-section-img .img-content{
-    width: 50%;
+    width: 80%;
+}
+
+#golf-vid-1{
+    height: 150px;
 }
