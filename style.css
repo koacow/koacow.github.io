@@ -110,9 +110,8 @@ ul li{
     display: flex;
     gap: 1rem;
 }
-.content-section .icon{
-    height: 50px;
-    width: min-content;
+.content-section .content-section-img .icon{
+    width: max(50%,200px);
 }
 .icons .icon{
     width: min(10vw,50px);
@@ -122,6 +121,7 @@ ul li{
     margin: 20px 0;
     display: flex;
     padding: 0 30px;
+    flex-wrap: wrap;
 }
 
 .projects .content-section, .skills .content-section{
@@ -136,15 +136,15 @@ ul li{
 }
 
 .content-section-text{
-    width: 50%;
+    width: max(50%,1vw);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .content-section-img{
+    width: max(50%,300px);
     display: flex;
     flex-direction: column;
-    width: 50%;
     align-items: center;
     justify-content: center;
 }
