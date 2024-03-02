@@ -161,6 +161,18 @@ ul li{
     width: 80%;
 }
 
+.books .img-content{
+    width: min(80%,350px);
+}
+
 #golf-vid-1{
     height: 150px;
+}
+
+footer{
+    background-color: var(--nav-background-color);
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    padding: 20px 0;
 }
