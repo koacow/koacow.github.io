@@ -216,6 +216,10 @@ ul li{
     width: 80%;
 }
 
+.content-section-img iframe{
+    width: min(80%, 560);
+}
+
 .books .img-content{
     width: min(80%,350px);
 }
