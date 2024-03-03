@@ -31,9 +31,60 @@ nav{
     z-index: 10;
     width: 100vw;
 }
+
+nav #logo{
+    width: max(5%, 50px);
+    margin-left: 20px;
+}
+
+.popup {
+    position: relative;
+    cursor: pointer;
+    width: min-content;
+}
+  
+.popup .popuptext {
+    font-weight: lighter;
+    visibility: hidden;
+    width: 30vw;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 10;
+}
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
 nav .nav-links{
     margin: 0 auto;
 }
+
 nav a{
     text-decoration: none;
     color: var(--nav-link-color);
@@ -69,7 +120,7 @@ nav a:hover{
     display: inline;
 }
 
-.introduction{
+.introduction.content-section-text{
     text-align: center;
     margin: 0 auto;
     width: 80%;
@@ -118,7 +169,7 @@ ul li{
 }
 
 .content-section{
-    margin: 20px 0;
+    margin: 50px 0;
     display: flex;
     padding: 0 30px;
     flex-wrap: wrap;
@@ -135,8 +186,12 @@ ul li{
     flex-wrap: wrap;
 }
 
+.content-section-text, .content-section-img{
+    margin: 30px 0;
+}
+
 .content-section-text{
-    width: max(50%,1vw);
+    width: max(50%,650px);
     display: flex;
     flex-direction: column;
     justify-content: center;

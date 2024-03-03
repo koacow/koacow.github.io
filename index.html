@@ -8,7 +8,15 @@
 </head>
 <body>
     <nav>
-        <p style="color: white;" id="logo">[Logo]</p>
+        <div class="popup">
+            <img src="img/logo.png" alt="My logo depicting a squirrel and my initials." id="logo">
+            <span class="popuptext" id="logoPopup">
+                Why the squirrel?<br>
+                My nickname at home is <strong>"Soc"</strong> which translates to squirrel in English. My brothers gave me this nickname when I was 3 years old. They said it captured my
+                <strong>energetic and curious</strong> nature. Since then, it has been one of the key defining aspects of my personality and approach to learning. It is very cute, no?
+                <br><em>Artwork by Aidan Ma.</em>
+            </span>
+          </div>
         <div class="nav-links">
             <a href="index.html">About me</a>
             <!-- <a href="people.html">My people</a> -->
@@ -25,6 +33,7 @@
                     <a href="https://github.com/koacow" target="_blank"><img src="/img/github.png" alt="Github icon" class="icon"></a>
                     <a href="https://www.linkedin.com/in/kcao04/" target="_blank"><img src="img/linkedin.png" alt="linkedin icon" class="icon"></a>
                 </div>
+                <p>khoa.cnd@gmail.com</p>
             </div>
         </div>
         <div class="content">
@@ -33,11 +42,11 @@
                     <h1>Meet, <h1 id="name">Khoa</h1></h1>
                     <p>Hi there!</p>
                     <br>
-                    <p>My name is Ngoc Duy Khoa Cao (call me "kwa") and I am a Computer Science major with a minor in Economics at Boston University.
-                        I call Ho Chi Minh city, Vietnam, more affectionately known as Saigon, my home. I spent the first 15 years of my life there before venturing to the 
-                        U.S. to attend The Hill School. I have presented everything (interesting) there is to know about me on this website.<p>
+                    <p>My name is Ngoc Duy Khoa Cao (pronounced "kwa cow") and I am a Computer Science major with a minor in Economics at Boston University's College of Arts and Sciences.
+                        I am from Ho Chi Minh city, Vietnam, or, I like to say, I am Saigonese. I spent the first 15 years of my life there before venturing to the 
+                        U.S. to attend The Hill School in Pottstown, PA. In March 2023, I got notified that I would be an incoming Terrier studying Computer Science<p>
                     <br>
-                    <p>Feel free to peruse and let me know how I did!</p>
+                    <p>This website is a semi-informal introduction to who I am, what I like, and what I do.</p>
                 </div>
             </div>
             <div class="content-card secondary-color">
@@ -47,24 +56,24 @@
                         <div class="content-section-text">
                             <h2>Hack4Impact BU</h2>
                             <p>
-                                I attend weekly workshops on full-stack web development to prepare myself to join the Junior Development team which creates web applications for local
-                                Boston non profits.
+                                I attend weekly workshops on full-stack web development to prepare myself to join the Junior Development team which organizes these workshops and 
+                                the Impact team which develops web applications for local Boston non profits.
                             </p>  
                         </div>
                         <div class="content-section-img">
-                            <img src="img/hack4impact.svg" alt="Hack for impact logo" class="icon">
+                            <a href="https://hack4impact.org/" target="_blank"><img src="img/hack4impact.svg" alt="Hack for impact logo" class="icon"></a>
                         </div>  
                     </div>
                     <div class="content-section">
                         <div class="content-section-img">
-                            <img src="img/bumrc-logo.jpeg" alt="BU mars rover logo" class="icon">
+                            <a href="https://bumrc.org/" target="_blank"><img src="img/bumrc-logo.jpeg" alt="BU mars rover logo" class="icon"></a>
                         </div>
                         <div class="content-section-text">
                             <h2>BU Mars Rover</h2>
                             <p>
                                 I serve as an <em>Autonomous Navigation Engineer</em> for BU Mars Rover's Software team. I'm incredibly blessed to be working with 100+ other members
                                 to develop BU's rover entry into the 2024 University Rover Challenge in Utah. I collaborate with 5 others to implement control software and autonomous navigation
-                                algorithms for the rover using the ROS and OpenCV object detection library.
+                                algorithms for the rover using the Python and the ROS framework.
                             </p>    
                         </div>  
                     </div>
@@ -77,7 +86,7 @@
                             </p>    
                         </div>
                         <div class="content-section-img">
-                            <img src="img/bufc-logo.png" alt="BU finance and investment club logo" class="icon">
+                            <a href="https://www.bufcinvest.com/" target="_blank"><img src="img/bufc-logo.png" alt="BU finance and investment club logo" class="icon"></a>
                         </div>
                     </div>
                     <div class="content-section">
@@ -85,7 +94,7 @@
                             <img src="img/intl-ambassador.png" alt="" class="img-content">
                         </div>    
                         <div class="content-section-text">
-                            <h2>International Ambassadors @ The Hill School</h2>
+                            <h2>International Ambassadors @ <a href="https://www.thehill.org/" target="_blank">The Hill School</a></h2>
                             <p>
                                 I was the Head International Ambassador for The Hill School for 2 years. I led a team of 15 International Ambassadors serving over 100 international students.
                                 I collaborated directly with the program advisor and school administrators to implement new policies and support channels, improving the overall experience of
@@ -162,7 +171,8 @@
    <footer>
         <p>v1.0.0</p>
         <p>Built with vanilla HTML, CSS, and JavaScript.</p>
+        <p>Logo artwork by Aidan Ma.</p>
    </footer>
-   <script src="script.js" defer></script>
+   <script src="script.js"></script>
 </body>
 </html>
