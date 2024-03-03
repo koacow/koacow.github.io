@@ -46,7 +46,7 @@ nav #logo{
 .popup .popuptext {
     font-weight: lighter;
     visibility: hidden;
-    width: 30vw;
+    width: 50vw;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -54,7 +54,6 @@ nav #logo{
     padding: 8px 8px;
     position: absolute;
     z-index: 10;
-    overflow: auto;
 }
 
 .popup .popuptext::after {
