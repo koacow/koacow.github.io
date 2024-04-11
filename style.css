@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Poppins';
 } 
 
 html{
-    scroll-behavior: smooth;
-    width: fit-content;
+    box-sizing: border-box;
 }
 
 :root{
@@ -15,14 +14,16 @@ html{
     --nav-background-color: #131515;
     --nav-link-color: #8E6E53;
     --nav-link-hover-color: #C69C72;
+    --nav-link-active-color: beige;
     --main-primary-color: #8E6E53;
     --main-secondary-color: #C69C72;
     --main-box-shadow-color: lightgrey;
 }
-
+nav, footer{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
 nav{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
     padding: 20px 0;
     background: var(--nav-background-color);
@@ -33,19 +34,18 @@ nav{
 }
 
 nav #logo{
-    width: max(5%, 50px);
+    width: 50px;
     margin-left: 20px;
 }
 
 .popup {
-    position: relative;
+    width: 50%;
     cursor: pointer;
-    width: min-content;
 }
   
 .popup .popuptext {
     font-weight: lighter;
-    visibility: hidden;
+    display: none;
     width: 50vw;
     background-color: #555;
     color: #fff;
@@ -66,7 +66,7 @@ nav #logo{
 }
 
 .popup .show {
-    visibility: visible;
+    display: block;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s
 }
@@ -82,7 +82,10 @@ nav #logo{
 }
 
 nav .nav-links{
-    margin: 0 auto;
+    width: 50%;
+    padding-right: 50px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav a{
@@ -94,6 +97,20 @@ nav a{
 nav a:hover{
     color: var(--nav-link-hover-color);
 }
+
+nav a:active{
+    color: var(--nav-link-active-color);
+}
+
+.main, .title{
+    font-family: 'Merriweather', sans-serif;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+
+  
+
 .title{
     margin: 20px;
     display: flex;
@@ -116,13 +133,10 @@ nav a:hover{
     flex-direction: column;
     background-color: var(--main-background-color);
 }
-.introduction h1{
-    display: inline;
-}
 
-.introduction.content-section-text{
-    text-align: center;
+.introduction{
     margin: 0 auto;
+    text-align: center;
     width: 80%;
 }
 #name{
@@ -147,7 +161,7 @@ ul li{
     padding: 25px 0;
     box-shadow: var(--main-box-shadow-color) 5px 5px;
     width: 100%;
-    height: max(min-content,90vh);
+    min-height: 90vh;
 }
 
 .content-card.primary-color{
@@ -169,7 +183,6 @@ ul li{
 }
 
 .content-section{
-    margin: 50px 0;
     display: flex;
     padding: 0 30px;
     flex-wrap: wrap;
@@ -187,17 +200,21 @@ ul li{
 }
 
 .content-section-text, .content-section-img{
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
 .content-section-text{
-    width: max(50%,650px);
+    flex-grow: 3;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .content-section-img{
-    width: max(50%,300px);
+    flex-grow: 1;
+    max-width: 50%;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,6 +227,10 @@ ul li{
 
 .content-section a:hover{
     color: grey;
+}
+
+.content-section a:active{
+    color: var(--nav-link-active-color);
 }
 
 .content-section-img .img-content{
@@ -234,4 +255,18 @@ footer{
     font-weight: lighter;
     text-align: center;
     padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main, .title{
+        font-size: 12px;
+    }
+
+    .content-section-text{
+        max-width: 100%;
+    }
+    
+    .content-section-img{
+        max-width: 100%;
+    }
 }
