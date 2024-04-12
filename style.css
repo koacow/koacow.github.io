@@ -164,6 +164,16 @@ ul li{
     width: 100%;
 }
 
+.content-card.skills{
+    display: grid;
+    grid-template: fit-content 100% / repeat(3,1fr);
+    
+}
+
+.content-card h2{
+    grid-area: 1 / 1 / span 1 / span 3;
+}
+
 .content-card.primary-color{
     background-color: var(--main-primary-color);
 }
@@ -190,7 +200,7 @@ ul li{
     flex-direction: row-reverse;
 }
 
-.projects .content-section{
+.projects .content-section, .skills .content-section{
     display: block;
 }
 
@@ -199,18 +209,18 @@ ul li{
 }
 
 .content-section-text{
-    flex-grow: 1;
-    max-width: 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .content-section-img{
-    flex-grow: 1;
-    max-width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
 }
 
 .content-section a{
@@ -232,7 +242,8 @@ ul li{
 }
 
 .content-section-img iframe{
-    width: min(80%, 560);
+    height: 100%;
+    width: 100%;
 }
 
 .books .img-content{
@@ -266,10 +277,10 @@ footer{
     }
 
     .content-section-text{
-        max-width: 100%;
+        width: 100%;
     }
     
     .content-section-img{
-        max-width: 100%;
+        width: 100%;
     }
 }
