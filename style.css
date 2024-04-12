@@ -161,7 +161,6 @@ ul li{
 
 .content-card{
     padding: 25px 0;
-    box-shadow: var(--main-box-shadow-color) 5px 5px;
     width: 100%;
 }
 
