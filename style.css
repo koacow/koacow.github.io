@@ -139,6 +139,31 @@ nav a:active{
     transform: scale(0.9);
 }
 
+.title a.button-link{
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+    border: 0.2rem solid var(--nav-background-color);
+    color: var(--nav-background-color);
+    background-color: var(--main-primary-color);
+    padding: 0.3rem 0.1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 0.4rem auto;
+}
+
+.title a.button-link:hover{
+    border: 0.2rem solid var(--main-primary-color);
+    color: var(--main-background-color);
+    background-color: var(--nav-background-color);
+}
+
+.title a.button-link:active{
+    border: 0.2rem solid var(--main-primary-color);
+    color: var(--nav-background-color);
+    background-color: var(--main-background-color);
+}
+
 .main{
     display: flex;
     flex-direction: column;
