@@ -7,6 +7,7 @@
 
 html{
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 :root{
@@ -252,7 +253,6 @@ ul li{
 
 .content-section a{
     color: black;
-    max-width: min-content;
 }
 
 .content-section a:hover{
@@ -266,12 +266,13 @@ ul li{
 .content-section-img .img-content{
     width: 25rem;
     height: auto;
-    min-width: 150px;
+    max-width: 100%;
 }
 
 .content-section-img .icon{
     width: 15rem;
-    min-width: 100px;
+    height: auto;
+    max-width: 100%;
 }
 
 .content-section-img iframe{
@@ -299,6 +300,10 @@ footer{
 
 @media screen and (max-width: 768px) {
 
+    html{
+        font-size: 12px;
+    }
+    
     .content-card{
         padding: 1rem;
     } 
