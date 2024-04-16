@@ -23,14 +23,14 @@ nav, footer{
     font-family: 'Poppins', 'Roboto', sans-serif;
 }
 nav{
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 1.5rem;
     background: var(--nav-background-color);
     position: sticky;
     top: 0;
     z-index: 10;
-    width: 100vw;
 }
 
 nav #logo{
@@ -39,7 +39,6 @@ nav #logo{
 }
 
 .popup {
-    width: 50%;
     cursor: pointer;
 }
   
@@ -82,10 +81,9 @@ nav #logo{
 }
 
 nav .nav-links{
-    width: 50%;
-    padding-right: 50px;
     display: flex;
     justify-content: flex-end;
+    margin-left: auto
 }
 
 nav a{
@@ -105,7 +103,7 @@ nav a:active{
 .main, .title{
     font-family: 'Merriweather', sans-serif;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .title{
@@ -116,30 +114,39 @@ nav a:active{
     gap: 20px;
 }
 
-.title img{
-    width: min(20vw,150px);
+.title .title-left img{
+    width: 14rem;
+    height: auto;
+    min-width: 150px;
 }
 
-.title .icons{
+.title .icon-container{
     display: flex;
     gap: 1rem;
+}
+
+.title .icon-container img{
+    width: 3rem;
+    height: auto;
+    min-width: 50px;
 }
 
 .title .icon:hover{
     transform: scale(1.1);
 }
 
+.title .icon:active{
+    transform: scale(0.9);
+}
+
 .main{
-    width:100vw;
     display: flex;
     flex-direction: column;
     background-color: var(--main-background-color);
 }
 
 .introduction{
-    margin: 0 auto;
     text-align: center;
-    width: 80%;
 }
 #name{
     color: var(--main-background-color);
@@ -150,7 +157,9 @@ nav a:active{
 
 .content h2{
     text-align: center;
+    line-height: 2;
 }
+
 ul{
     list-style: none;
 }
@@ -160,17 +169,16 @@ ul li{
 }
 
 .content-card{
-    padding: 25px 0;
-    width: 100%;
+    padding: 2rem 3rem;
 }
 
 .content-card.skills{
     display: grid;
-    grid-template: fit-content 100% / repeat(3,1fr);
-    
+    grid-template: auto 80% / repeat(3,1fr);
+    justify-items: center;
 }
 
-.content-card h2{
+.content-card.skills h2{
     grid-area: 1 / 1 / span 1 / span 3;
 }
 
@@ -182,18 +190,11 @@ ul li{
     background-color: var(--main-secondary-color);
 }
 
-.content-section .content-section-img .icon{
-    width: max(50%,200px);
-}
-.icons .icon{
-    width: min(10vw,50px);
-}
-
 .content-section{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
-    margin: 50px 30px 0px 30px;
+    margin: 3rem 2rem;
+    gap: 1.5rem;
 }
 
 .content-section.reversed{
@@ -202,10 +203,6 @@ ul li{
 
 .projects .content-section, .skills .content-section{
     display: block;
-}
-
-.content-section-text, .content-section-img{
-    margin: 20px 20px;
 }
 
 .content-section-text{
@@ -220,7 +217,12 @@ ul li{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     align-items: space-evenly;
+}
+
+.content-section-text h3{
+    line-height: 2;
 }
 
 .content-section a{
@@ -237,17 +239,23 @@ ul li{
 }
 
 .content-section-img .img-content{
-    width: 80%;
-    margin: 0 auto;
+    width: 25rem;
+    height: auto;
+    min-width: 150px;
+}
+
+.content-section-img .icon{
+    width: 15rem;
+    min-width: 100px;
 }
 
 .content-section-img iframe{
-    height: 100%;
-    width: 100%;
+    height: 17.5rem;
+    width: 25rem;
 }
 
 .books .img-content{
-    width: min(80%,350px);
+    width: 18rem;
 }
 
 #golf-vid-1{
@@ -259,21 +267,19 @@ footer{
     color: white;
     font-weight: lighter;
     text-align: center;
-    padding: 20px 0;
+    padding: 1.25rem 0;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
 
-    nav{
-        font-size: 12px;
-    }
-
-    .main, .title{
-        font-size: 15px;
-    }
+    .content-card{
+        padding: 1rem;
+    } 
 
     .content-section{
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .content-section-text{
@@ -283,4 +289,9 @@ footer{
     .content-section-img{
         width: 100%;
     }
+
+    .content-card.skills{
+        display: block;
+    }
+
 }
