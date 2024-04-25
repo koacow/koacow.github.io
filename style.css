@@ -261,6 +261,18 @@ ul li{
     align-items: space-evenly;
 }
 
+.projects .content-section .content-section-text{
+    width: 100%;
+}
+
+.projects .content-section .content-section-text.hidden{
+    display: none;
+}
+
+.projects .content-section h3{
+    cursor: pointer;
+    line-height: 2;
+}
 .content-section-text h3{
     line-height: 2;
 }
