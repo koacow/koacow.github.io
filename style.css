@@ -142,8 +142,12 @@ nav a:active{
     min-width: 50px;
 }
 
+.title .icon {
+    transition: transform 0.3s ease;
+}
+
 .title .icon:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) ;
 }
 
 .title .icon:active{
@@ -165,6 +169,7 @@ a.button-link{
     border-radius: 1rem;
     text-align: center;
     width: 10rem;
+    transition: background-color 0.3s ease;
 }
 
 a.button-link:hover{
@@ -263,10 +268,30 @@ ul li{
 
 .projects .content-section .content-section-text{
     width: 100%;
+    -webkit-animation: pullDown 0.5s;
+    animation: pullDown 0.5s;
 }
 
 .projects .content-section .content-section-text.hidden{
     display: none;
+}
+
+@-webkit-keyframes pullDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes pullDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .projects .content-section h3{
